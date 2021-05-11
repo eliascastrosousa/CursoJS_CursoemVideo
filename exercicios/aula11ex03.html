@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11, Exercicio 03</title>
+    <style>
+        body {
+            background-color:slateblue
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p#pergunta {}
+
+        h1#titulo {
+            background-color:rebeccapurple
+        }
+
+        h2#verific {
+            text-align: center;
+            background-color: rebeccapurple
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="titulo">Verificação de Nacionalidade <img src="brasil.png" alt="Logo brasil " title="Logo brasil"
+            width="50" /></h1>
+    <h2> Em que pais você nasceu? </h2>
+    <input type="text" name="nac" id="nac">
+    <input type="button" value="Confirmar" onclick="confirmar()">
+    <div id="res"> </div>
+
+    <h2 id="verific"> Verificação de idade <img src="idade.png" alt="Faixa de idades" title="Faixa de idades"
+        width="50" /></h2>
+    <h2>Digite seu ano de Nascimento: </h2> <input type="number" name="nasc" id="nasc">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="ver"> </div>
+
+    <script>
+        function confirmar() {
+            var nac = document.querySelector('input#nac')
+            var nacionalidade = String(nac.value)
+            var res = document.querySelector('div#res')
+
+            if (nacionalidade == 'Brasil') {
+                res.innerHTML = `<h2>Você nasceu no ${nacionalidade}</h2>`
+                res.innerHTML += `<h2>Você é Brasileiro. pode passar!</h2>`
+                res.innerHTML += `<img src="dilma.gif" alt="dilmãe" width="500"/>`
+            }
+            else if (nacionalidade == 'brasil') {
+                res.innerHTML = `<h2>Você nasceu no ${nacionalidade}</h2>`
+                res.innerHTML += `<h2>Você é Brasileiro. pode passar!</h2>`
+                res.innerHTML += `<img src="dilma.gif" alt="dilmãe" width="500" />`
+
+
+            }
+            else {
+                res.innerHTML = `<h2>Você nasceu no(a): ${nacionalidade}!</h2>`
+                res.innerHTML += `<h2>SAI DAQUI IMIGRANTE!!!!!!!</h2>`
+                res.innerHTML += `<img src="bolsonaro.gif" alt="Bolsonaro" width="500"/>`
+            }
+        }
+        function verificar() {
+            var nasc = document.querySelector('input#nasc')
+            var idadeformatada = Number(nasc.value)
+            var idade = 2021 - idadeformatada
+            var resp = document.querySelector('div#ver')
+            resp.innerHTML = `<h3> Você tem ${idade} anos. </h3>`
+
+            if (idade < '13') {
+                resp.innerHTML += `<h3>Você está na sua infância! Aproveite</h3>`
+            }
+            else if (idade < '19') {
+                resp.innerHTML += `<h3>Você está na sua Adolescencia! uma dica: cuidado com o tampão do dedo jogando bola no asfalto. e Aproveite.</h3>`
+            }
+            else if (idade < '28') {
+                resp.innerHTML += `<h3>Você já é um Jovem Adulto! Quantas responsabilidades, nao?! </h3>`
+            }
+            else if (idade < '60') {
+                resp.innerHTML += `<h3>Um Homem Adulto tem muito o que fazer! O mundo pode ser seu! </h3>`
+            }
+            else { 
+                resp.innerHTML += `<h3>Você está no momento para descansar. Relaxe e curta o restante da sua vida.</h3>`
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

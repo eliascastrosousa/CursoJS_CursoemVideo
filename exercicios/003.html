@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 003</title>
+    <style>
+        body { background-color:blueviolet;
+            font: normal 14pt Arial;
+            color: azure;
+        }
+        script { font: normal 20pt Arial;
+        color:lightblue;}
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual seu nome? ')
+        document.write(`Seu nome tem ${nome.length} letras.<br>`)
+        document.writeln(`Seu nome em letra maiuscula é <b>${nome.toUpperCase()}</b>! <br>`)
+        document.write(`Seu nome em letra minucula é ${nome.toLowerCase()}.<br>`)
+        var n1 = 1550
+        var s = n1.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})
+        document.write(`Seu Salario é de ${s}`)
+
+    </script>
+</body>
+</html>

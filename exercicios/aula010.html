@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#area{
+            font: normal 20pt arial;
+            background:seagreen;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        div#area2{
+            font: normal 20pt arial;
+            background:seagreen;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" >
+        interaja
+    </div>
+    <div id="area2" >
+        interaja
+    </div>
+    <script>
+        var a = document.getElementById('area') // criar uma variavel chamada a, nela estara o documento de id "area" ( <div id="area"> )
+        a.addEventListener('click',clicar) //adcionar o evendo click a variavel a (algo pra acontecer quando clicar dentro da variavel a ), e dar o nome "clicar" a ela
+        a.addEventListener('mouseout',saiu)
+        a.addEventListener('mouseenter',entrou)
+
+
+        function clicar() { //criar uma função chamada clicar() para atribuir oq fazer quando clicar
+            a.innerText = 'Clicou' //quando clicar, mudar o texto para clicou
+            a.style.background = 'yellow' // mudar o fundo para amarelo
+            a.style.color = 'black'      // mudar cor da fonte para preto
+        }
+        function entrou() {
+            a.innerText = 'Entrou'
+            a.style.background = 'red'
+        }
+        function saiu() {
+            a.innerText = 'Saiu'
+            a.style.background = 'green'
+        }
+
+        var b = document.getElementById('area2') // criar uma variavel chamada a, nela estara o documento de id "area" ( <div id="area"> )
+        b.addEventListener('click',clicar) //adcionar o evendo click a variavel a (algo pra acontecer quando clicar dentro da variavel a ), e dar o nome "clicar" a ela
+        b.addEventListener('mouseout',saiu)
+        b.addEventListener('mouseenter',entrou)
+
+
+        function clicar() { //criar uma função chamada clicar() para atribuir oq fazer quando clicar
+            b.innerText = 'Clicou' //quando clicar, mudar o texto para clicou
+            b.style.background = 'yellow' // mudar o fundo para amarelo
+            b.style.color = 'black'      // mudar cor da fonte para preto
+        }
+        function entrou() {
+            b.innerText = 'Entrou'
+            b.style.background = 'red'
+        }
+        function saiu() {
+            b.innerText = 'Saiu'
+            b.style.background = 'green'
+        }
+        
+
+    </script>
+</body>
+</html>
+

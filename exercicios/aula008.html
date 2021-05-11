@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: indigo;
+            color:lavender;
+            font: normal arial 12pt;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="inicio">Iniciando meus estudos com DOM</h1>
+    <p>Aqui vai o Resultado </p>
+    <p id="par">Aprendendo a usar o <strong>DOM</strong> no javascript</p>
+    <div>Clique Aqui</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0] // pegou os elementos da tag p, escolhido apenas o primeiro paragrafo (0).
+        //window.document.write(p1.innerText) // vai puxar só o texto sem formatação da variavel p1
+        //window.alert('Boa noite, '+p1.innerHTML)
+        //var d = window.document.getElementById('inicio')
+        //window.document.write(d.innerText) 
+    
+        //var e = document.getElementById('par')
+        //document.write(e.innerText) 
+        var f = document.querySelector('p#par')
+        document.write(f.innerHTML)
+    </script>
+</body>
+</html>

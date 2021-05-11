@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 10, Exercicio 02 entrada de dados</title>
+    <style>
+        body {
+            background-color: rgb(106, 13, 134);
+        }
+        header#cabecalho {
+            background-color:purple;
+            text-align: center;
+            height: 250px;
+            line-height: 250px;
+        }
+
+        h2 {
+            background-color: rgb(155, 101, 177);
+            text-align: center;
+        }
+        div#inicio {
+            font: normal 14pt arial;
+            background-color:purple;
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        div#formulario {
+            font: normal 14pt arial;
+            background-color:purple;
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        div#menu {
+            font: normal 14pt arial;
+            background-color:purple;
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        footer{
+            background-color: rgb(155, 101, 177);
+        }
+    </style>
+</head>
+    <body>
+    
+        <header id="cabecalho" >
+            <h1> Faça seu Conta Aqui! </h1> 
+        </header>
+
+        <br>  
+
+        <div id="formulario"> Formulario </div> 
+        <div id="menu"> Menu </div>
+        <div id="inicio"> Inicio </div>
+        
+        
+        <br>
+        <br>
+            <div>
+                <div> <input type="number" name="txtn1" id="txtn1"> +  <!-- aqui criei uma entrada de dados do tipo numero, dei o nome e o id dela de txt1 -->
+                    <input type="number" name="txtn2" id="txtn2"> <!--aqui a mesma coisa-->
+                    <input type="button" value="Somar" onclick="somar()"> <!--aqui criei um botão com o nome somar que quando é clicado, executa uma função chamada somar() -->
+                    <div id="res"><h3>Resultado </h3></div>
+                </div>
+            </div>  
+
+        <script>
+
+            var a = document.getElementById('formulario') // criar uma variavel chamada a, nela estara o documento de id "area" ( <div id="area"> )
+                a.addEventListener('mouseout',saiu)
+                a.addEventListener('mouseenter',entrou)
+
+                function entrou() { //criar uma função chamada clicar() para atribuir oq fazer quando clicar
+                    a.style.background = 'violet';
+                }
+                function saiu() {
+                    a.style.background = 'purple'
+                }
+
+            function somar() {   //criando a função somar()
+                var tn1 = document.getElementById('txtn1') //primeiro vou criar as variaveis com os 
+                var tn2 = document.getElementById('txtn2')
+                var res = document.getElementById('res')
+                var n1 = Number(tn1.value)
+                var n2 = Number(tn2.value)
+                var s = (n1+n2)
+                res.innerHTML = `a soma de ${n1} com ${n2} é ${s}` 
+            }
+        </script>
+
+        <footer>
+            copyright 2021
+        </footer>
+            
+    </body>
+</html>
